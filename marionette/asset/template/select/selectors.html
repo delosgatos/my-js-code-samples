@@ -1,0 +1,188 @@
+<script type="text/template" id="basicSelector">
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.id %>"><%= _.escape(item.name) %></option>
+    <% }); %>
+</script>
+
+<script type="text/template" id="clubSelector">
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.id %>"><%= _.escape(item.profile.name) %></option>
+    <% }); %>
+</script>
+
+<script type="text/template" id="categorySelector">
+    <option value="0">Выберите категорию</option>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.id %>" data-nested="<%=item.child_count%>"><%= _.escape(item.name) %></option>
+    <% }); %>
+</script>
+
+<!-- MMM -->
+<script type="text/template" id="markSelector">
+    <option value="0">Выберите марку</option>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.mark_id %>"><%= _.escape(item.mark_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<script type="text/template" id="modelSelector">
+    <% if(items.length != 1){ %>
+    <option value="0">Выберите модель</option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.model_id %>"><%= _.escape(item.model_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% } %>
+</script>
+<script type="text/template" id="yearSelector">
+    <% if(items.length != 1){ %>
+    <option value="">Выберите год</option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.year %>"><%= item.year %></option>
+    <% }); %>
+</script>
+<script type="text/template" id="generationSelector">
+    <% if(items.length != 1){ %>
+    <option value="">Выберите поколение</option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.generation_id %>"><%= _.escape(item.generation_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<script type="text/template" id="bodySelector">
+    <% if(items.length != 1){ %>
+    <option value="">Выберите кузов</option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.slug %>"><%= _.escape(item.name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<script type="text/template" id="modificationSelector">
+    <% if(items.length != 1 || (hasOwnProperty("selectAll") && selectAll)){ %>
+    <option value="">Выберите модификацию</option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.modification_id %>"><%= _.escape(item.modification_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<!-- MMM V2 -->
+<script type="text/template" id="markSelectorV2">
+    <option value="0"><% if(hasOwnProperty("nullTitle") && nullTitle){ %><%=nullTitle%><% }else{ %>Марка<% } %></option>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.mark_id %>"><%= _.escape(item.mark_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<script type="text/template" id="modelSelectorV2">
+    <% if(items.length != 1 || (hasOwnProperty("selectAll") && selectAll)){ %>
+    <option value="0"><% if(hasOwnProperty("nullTitle") && nullTitle){ %><%=nullTitle%><% }else{ %>Модель<% } %></option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.model_id %>"><%= _.escape(item.model_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% } %>
+</script>
+<script type="text/template" id="yearSelectorV2">
+    <% if(items.length != 1 || (hasOwnProperty("selectAll") && selectAll)){ %>
+    <option value=""><% if(hasOwnProperty("nullTitle") && nullTitle){ %><%=nullTitle%><% }else{ %>Год<% } %></option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.year %>"><%= item.year %></option>
+    <% }); %>
+</script>
+<script type="text/template" id="generationSelectorV2">
+    <% if(items.length != 1 || (hasOwnProperty("selectAll") && selectAll)){ %>
+    <option value=""><% if(hasOwnProperty("nullTitle") && nullTitle){ %><%=nullTitle%><% }else{ %>Поколение<% } %></option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.generation_id %>"><%= _.escape(item.generation_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<script type="text/template" id="bodySelectorV2">
+    <% if(items.length != 1 || (hasOwnProperty("selectAll") && selectAll)){ %>
+    <option value=""><% if(hasOwnProperty("nullTitle") && nullTitle){ %><%=nullTitle%><% }else{ %>Кузов<% } %></option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.slug %>"><%= _.escape(item.name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+<script type="text/template" id="modificationSelectorV2">
+    <% if(items.length != 1 || (hasOwnProperty("selectAll") && selectAll)){ %>
+    <option value=""><% if(hasOwnProperty("nullTitle") && nullTitle){ %><%=nullTitle%><% }else{ %>Модификация<% } %></option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= item.modification_id %>"><%= _.escape(item.modification_name) %></option>
+    <% }); %>
+    <% if(items.length){ %>
+    <option value="-1">Нет в списке</option>
+    <% }; %>
+</script>
+
+
+
+
+
+
+<script type="text/template" id="countryGeoObjectSelector">
+        <% if(!items || !items.length || items.length > 1){ %>
+        <option value="">Выберите страну</option>
+        <% } %>
+        <% _.each(items, function(item){ %>
+        <option value="<%= _.escape(item.id) %>"><%
+            if(item.name_ru.length > 1) {%>
+            <%= _.escape(item.name_ru) %>
+            <%}else{%>
+            <%= _.escape(item.name_en) %>
+            <% } %></option>
+        <% }); %>
+</script>
+<script type="text/template" id="regionGeoObjectSelector">
+    <% if(!items || !items.length || items.length > 1){ %>
+    <option value="">Выберите область</option>
+    <% } %>
+    <% _.each(items, function(item){ %>
+    <option value="<%= _.escape(item.id) %>"><%
+        if(item.name_ru.length > 1) {%>
+        <%= _.escape(item.name_ru) %>
+        <%}else{%>
+        <%= _.escape(item.name_en) %>
+        <% } %></option>
+    <% }); %>
+</script>
+<script type="text/template" id="cityGeoObjectSelector">
+        <% if(!items || !items.length || items.length > 1){ %>
+        <option value="">Выберите город</option>
+        <% } %>
+        <% _.each(items, function(item){ %>
+        <option value="<%= _.escape(item.id) %>"><%
+            if(item.name_ru.length > 1) {%>
+            <%= _.escape(item.name_ru) %>
+            <%}else{%>
+            <%= _.escape(item.name_en) %>
+            <% } %></option>
+        <% }); %>
+</script>

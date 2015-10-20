@@ -1,0 +1,79 @@
+<script type="text/template" id="basic">
+    <div class="js-popup-container">
+        <input type="checkbox" class="js-close-checkbox" id="popup-trigger" checked />
+        <div class="b-popup-container">
+            <label class="b-overlay" for="popup-trigger"></label>
+            <div class="b-popup-outer">
+                <div class="js-popup-block b-popup <%= asset.class %>">
+                    <div class="b-popup-inner">
+                        <label for="popup-trigger" class="js-popup-close b-popup-close" title="Закрыть"><i class="fico-close"></i></label>
+                        <div class="b-popup-header m-hide">
+                            <div class="b-logo">Blamper</div>
+                        </div>
+                        <div class="b-popup-header-sec js-popup-title"><%= asset.title %></div>
+                        <div class="js-popup-content b-popup-body">
+                            <%= _.template(asset.content)({asset:asset}) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="wide">
+    <div class="js-popup-container">
+        <input type="checkbox" class="js-close-checkbox" id="popup-trigger" checked />
+        <div class="b-popup-container">
+            <label class="b-overlay" for="popup-trigger"></label>
+            <div class="b-popup-outer">
+                <div class="js-popup-block b-popup <%= asset.class %>">
+                    <div class="b-popup-inner" style="width:auto">
+                        <label for="popup-trigger" class="js-popup-close b-popup-close" title="Закрыть"><i class="fico-close"></i></label>
+                        <div class="b-popup-header m-hide">
+                            <div class="b-logo">Blamper</div>
+                        </div>
+                        <% if(asset.title){ %>
+                        <div class="b-popup-header-sec js-popup-title"><%= asset.title %></div>
+                        <% } %>
+                        <div class="js-popup-content b-popup-body" style="padding: 30px 50px 30px;">
+                            <%= _.template(asset.content)({asset:asset}) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="basic-buttons">
+    <div class="js-popup-container">
+        <input type="checkbox" class="js-close-checkbox" id="popup-trigger" checked />
+        <div class="b-popup-container">
+            <label class="b-overlay" for="popup-trigger"></label>
+            <div class="b-popup-outer">
+                <div class="js-popup-block b-popup <%= asset.class %>">
+                    <div class="b-popup-inner">
+                        <label for="popup-trigger" class="js-popup-close b-popup-close" title="Закрыть"><i class="fico-close"></i></label>
+                        <div class="b-popup-header m-hide">
+                            <div class="b-logo">Blamper</div>
+                        </div>
+                        <% if(asset.title){ %>
+                        <div class="b-popup-header-sec js-popup-title"><%= asset.title %></div>
+                        <% } %>
+                        <div class="js-popup-content b-popup-body">
+                            <%= _.template(asset.content)({asset:asset}) %>
+                            <% if(asset.button){ %>
+                            <div class="f_line f_btns cf">
+                                <button class="js-submit-button ui_btn ui_btn_27 ui_btn__yellow popup__btn<% if(asset.button["class"]){ print(' '+asset.button["class"]); } %>"><%= asset.button.title %></button>
+                                <button class="js-cancel-button ui_btn ui_btn_27 popup__btn">Отмена</button>
+                            </div>
+                            <% } %>
+                            <% if(asset.notice){ %>
+                            <div class="f_line f_bottom"><%= asset.notice %></div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

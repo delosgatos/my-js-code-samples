@@ -1,0 +1,8 @@
+<script type="text/template" id="categoryTags">
+    <% _.each(items, function(item){ %>
+    <a href="<%=item._url%>" data-id="<%=item.id%>" class="tag-unit nodeco q_tag<% if(item.active){ %> active<% } %>">
+        <span class="tag-name"><%= _.escape(item.name) %></span>
+        <span class="q_tag_count"><%if(item.count){%><%=item.count%><%}else{%>0<%}%> <span class="remove-tag q_tag_rem">×</span></span>
+    </a>
+    <% }); %>
+</script>

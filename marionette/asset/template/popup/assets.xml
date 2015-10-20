@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+    <asset id="getAdvice">
+        <class>b-popup__auth b-popup__anim-in</class>
+        <content>
+            <![CDATA[
+                <form action="#" method="post" class="b-auth-form" novalidate="">
+                    <div class="b-form-row">
+                        Если вы хотите получить личную консультацию специалиста автосервиса в вашем городе, оставьте свой телефон
+                    </div>
+                    <div class="b-form-row">
+                        <label class="e-text-label" for="login-email">Телефон</label>
+                        <div class="e-input-wrapper">
+                            <input data-mask="+7 (000) 000-00-00" data-field="phone" name="phone" class="e-input" type="tel" value="+7 " placeholder="+7 " />
+                            <span class="js-field-error b-note">
+                                <i class="fico-exclamation"></i>
+                                <span class="js-field-error-message b-note-message"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <button type="submit" class="js-submit-button b-btn b-btn__w100 b-btn__h42 b-btn__blue"><span>Получить консультацию</span></button>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="signin">
+        <class>b-popup__auth</class>
+        <title>Вход</title>
+        <content>
+            <![CDATA[
+                <form action="#" method="post" class="b-auth-form" novalidate>
+                    <div class="b-form-row b-form-row__bb">
+                        <div class="js-network-buttons b-social-share">
+                            <div class="l-row">
+                                <div class="l-col-6"><a href="#" data-network="fb" class="b-social-btn b-social-btn__fb fico-fb"></a></div>
+                                <div class="l-col-6"><a href="#" data-network="vk" class="b-social-btn b-social-btn__vk fico-vk"></a></div>
+                            </div>
+                            <!--span data-network="ok" class="b-social-btn b-social-btn__ok b-social-btn__disabled fico-ok" disabled></span-->
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <label class="e-text-label" for="login-email">Почта</label>
+                        <div class="e-input-wrapper">
+                            <input data-errors="{
+                                        &quot;!email&quot;: &quot;Введите вашу почту&quot;
+                                    }" data-field="email" name="email" type="email" class="e-input e-input__h42" id="login-email" placeholder="Введите e-mail">
+                            <span class="js-field-error b-note">
+                                <i class="fico-exclamation"></i>
+                                <span class="js-field-error-message b-note-message"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <div class="cfx">
+                            <label class="e-text-label fl" for="login-password">Пароль</label>
+                            <a href="#" class="js-password-remind fr">Забыли пароль?</a>
+                        </div>
+                        <div class="e-input-wrapper">
+                            <input data-errors="{
+                                        &quot;!length&quot;: &quot;Введите пароль&quot;
+                                        ,&quot;length>150&quot;: &quot;Введите менее 150 символов&quot;
+                                        ,&quot;length<4&quot;: &quot;Введите не менее 4 символов&quot;
+                                    }" data-field="password" name="password" type="password" class="e-input e-input__h42" id="login-password" placeholder="Введите пароль">
+                            <span class="js-field-error b-note">
+                                <i class="fico-checked"></i>
+                                <span class="js-field-error-message b-note-message">Все хорошо!</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <button type="submit" class="js-submit-button b-btn b-btn__w100 b-btn__h42 b-btn__blue"><span>Войти</span></button>
+                    </div>
+                </form>
+                <div class="b-popup-footer cfx">
+                    Не зарегистрированы? <a href="#" class="js-signup-button b-btn b-btn__h32 b-btn__blue fr"><span>Регистрация</span></a>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="signup">
+        <class>b-popup__auth</class>
+        <title>Регистрация</title>
+        <content>
+            <![CDATA[
+                <form action="#" method="post" class="b-auth-form" novalidate>
+                    <div class="b-form-row b-form-row__bb">
+                        <div class="js-network-buttons b-social-share">
+                            <div class="l-row">
+                                <div class="l-col-6"><a href="#" data-network="fb" class="b-social-btn b-social-btn__fb fico-fb"></a></div>
+                                <div class="l-col-6"><a href="#" data-network="vk" class="b-social-btn b-social-btn__vk fico-vk"></a></div>
+                            </div>
+                            <!--span data-network="ok" class="b-social-btn b-social-btn__ok b-social-btn__disabled fico-ok" disabled></span-->
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <label class="e-text-label" for="reg-email">Ваша почта</label>
+                        <div class="e-input-wrapper">
+                            <input data-errors="{
+                                        &quot;!email&quot;: &quot;Введите вашу почту&quot;
+                                    }" data-field="email" name="email" type="email" class="e-input e-input__h42" id="reg-email" placeholder="Введите e-mail">
+                            <span class="js-field-error b-note">
+                                <i class="fico-checked"></i>
+                                <span class="b-note-message js-field-error-message"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <label class="e-text-label" for="reg-password">Пароль <span class="e-text-label-desc">Не менее 4 символов</span></label>
+                        <div class="e-input-wrapper">
+                            <input data-errors="{
+                                        &quot;!length&quot;: &quot;Введите пароль&quot;
+                                        ,&quot;length>150&quot;: &quot;Введите менее 150 символов&quot;
+                                        ,&quot;length<4&quot;: &quot;Введите не менее 4 символов&quot;
+                                    }" data-field="password" name="password" type="password" class="e-input e-input__h42" id="reg-password" placeholder="Придумайте пароль">
+                            <span class="js-field-error b-note">
+                                <i class="fico-exclamation"></i>
+                                <span class="b-note-message js-field-error-message"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <button type="submit" class="js-submit-button b-btn b-btn__w100 b-btn__h42 b-btn__blue"><span>Зарегистрироваться</span></button>
+                    </div>
+                    <div class="b-form-row">
+                        <div class="b-auth-form-accept">Нажимая на кнопку «Зарегистрироваться»,<br/>я принимаю условия <a href="https://blamper.ru/pages/agreement" target="_blank">Пользовательского соглашения</a></div>
+                    </div>
+                </form>
+                <div class="b-popup-footer cfx">
+                    Уже зарегистрировались? <a href="#" class="js-signin-button b-btn b-btn__h32 b-btn__blue fr"><span>Войти</span></a>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="passwordRecovery">
+        <class>b-popup__auth</class>
+        <title>Восстановление пароля</title>
+        <content>
+            <![CDATA[
+                <form action="#" method="post" class="b-auth-form" novalidate>
+                    <div class="b-form-row">
+                        <label class="e-text-label" for="forgot-email">Почта при регистрации</label>
+                        <div class="e-input-wrapper">
+                            <input data-errors="{
+                                        &quot;!email&quot;: &quot;Введите вашу почту&quot;
+                                    }" data-field="email" name="email" type="email" class="e-input e-input__h42" id="forgot-email" placeholder="Введите e-mail" value="">
+                            <span class="js-field-error b-note">
+                                <i class="fico-exclamation"></i>
+                                <span class="js-field-error-message b-note-message">Неверный формат почты</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <button type="submit" class="js-submit-button b-btn b-btn__w100 b-btn__h42 b-btn__blue"><span>Сменить пароль</span></button>
+                    </div>
+                    <div class="b-form-row text-center">
+                        После нажатия на&nbsp;кнопку<br>на&nbsp;указанную почту будет выслана инструкция по&nbsp;смене пароля
+                    </div>
+                </form>
+                <!-- Success Message -->
+                <div class="js-success-message b-auth-form b-auth-form__success hide">
+                    На&nbsp;почту <strong class="b-auth-form-email-label b-semibold js-email-label"></strong><br>выслано письмо<br>с&nbsp;инструкцией по<br>восстановлению пароля!
+                </div>
+                <div class="b-popup-footer b-popup-footer__tight">
+                    <div class="l-row">
+                        <div class="l-col-6"><a href="#" class="js-signin-button b-btn b-btn__w100 b-btn__h32 b-btn__blue"><span>Вход</span></a></div>
+                        <div class="l-col-6"><a href="#" class="js-signup-button b-btn b-btn__w100 b-btn__h32 b-btn__blue"><span>Регистрация</span></a></div>
+                    </div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="signupStep2">
+        <class>b-popup__auth</class>
+        <title>Для завершения регистрации введите почту</title>
+        <content>
+            <![CDATA[
+                <form action="#" method="post" class="b-auth-form" novalidate>
+                    <div class="b-form-row b-form-row__bb">
+                        <div class="cfx">
+                            <div class="b-user-avatar b-user-avatar__68 fl">
+                                <img src="http://placehold.it/60x60" alt="Константин Ерофеев">
+                            </div>
+                            <div class="b-auth-form-user">
+                                <div class="b-auth-form-user-name">Константин Ерофеев</div>
+                                <div class="b-auth-form-user-network">Одноклассники</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <label class="e-text-label" for="step1-email">Почта</label>
+                        <div class="e-input-wrapper">
+                            <input type="email" class="e-input e-input__h42" id="step1-email" placeholder="Введите e-mail">
+                            <span class="b-note">
+                                <i class="fico-exclamation"></i>
+                                <span class="b-note-message">Неверный формат почты</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <button type="submit" class="b-btn b-btn__w100 b-btn__h42 b-btn__blue"><span>Зарегистрироваться</span></button>
+                    </div>
+                    <div class="b-form-row">
+                        <div class="e-checkbox">
+                            <input type="checkbox" id="agreement" checked>
+                            <label for="agreement"><i></i>Нажимая на кнопку «Зарегистрироваться», я принимаю условия <a href="#" target="_blank">Пользовательского соглашения</a></label>
+                        </div>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="signupStep2AlreadyRegistered">
+        <class>b-popup__auth</class>
+        <title>Для завершения регистрации введите почту</title>
+        <content>
+            <![CDATA[
+                <form action="#" method="post" class="b-auth-form" novalidate>
+                    <div class="b-form-row b-form-row__bb">
+                        <div class="cfx">
+                            <div class="b-user-avatar b-user-avatar__68 fl">
+                                <img src="http://placehold.it/60x60" alt="Константин Ерофеев">
+                            </div>
+                            <div class="b-auth-form-user">
+                                <div class="b-auth-form-user-name">Константин Ерофеев</div>
+                                <div class="b-auth-form-user-network">Одноклассники</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-form-row b-form-row__bb">
+                        <label class="e-text-label" for="step2-email">Почта</label>
+                        <div class="e-input-wrapper">
+                            <input type="email" class="e-input e-input__h42" id="step2-email" placeholder="Введите e-mail">
+                            <span class="b-note">
+                                <i class="fico-exclamation"></i>
+                                <span class="b-note-message">Неверный формат почты</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row b-form-row__bb">
+                        Пользователь с такой почтой уже зарегистрирован, введите пароль, чтобы связать аккаунт с почтой
+                    </div>
+                    <div class="b-form-row">
+                        <div class="cfx">
+                            <label class="e-text-label fl" for="login-password">Пароль</label>
+                            <a href="#" class="fr">Забыли пароль?</a>
+                        </div>
+                        <div class="e-input-wrapper e-input-wrapper__valid">
+                            <input type="password" class="e-input e-input__h42" id="login-password" placeholder="Введите пароль">
+                            <span class="b-note">
+                                <i class="fico-checked"></i>
+                                <span class="b-note-message">Все хорошо!</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="b-form-row">
+                        <button type="submit" class="b-btn b-btn__w100 b-btn__h42 b-btn__blue"><span>Войти</span></button>
+                    </div>
+                </form>
+                <div class="b-popup-footer b-auth-form-footer__tight">
+                    <div class="b-form-row b-form-row__2">
+                        <div class="b-form-col"><a href="#" class="b-btn b-btn__w100 b-btn__h32 b-btn__blue"><span>Вход</span></a></div>
+                        <div class="b-form-col"><a href="#" class="b-btn b-btn__w100 b-btn__h32 b-btn__blue"><span>Регистрация</span></a></div>
+                    </div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="editAnswer">
+        <class>b-popup__answer</class>
+        <title>Изменение ответа</title>
+        <image_template>
+            <![CDATA[
+            <div class="l-col-3 js-image-attachment" data-hash="<%= item.hash %>">
+                <div class="b-answer-form-attachment">
+                    <img src="<%= item.url %>" alt="">
+                    <a href="#" class="js-remove-unit fico-delete"></a>
+                </div>
+            </div>
+            ]]>
+        </image_template>
+        <content>
+            <![CDATA[
+                <!-- Answer Form -->
+                <div class="b-answer-form">
+                    <textarea data-field="text" name="text" class="e-input" placeholder="Введите текст ответа"></textarea>
+                    <div class="js-media-viewer">
+                        <div class="b-answer-form-attachments cfx">
+                            <div class="l-row js-media-list"></div>
+                        </div>
+                    </div>
+                    <div class="b-answer-form-submit">
+                        <a href="#" class="js-submit-button b-btn b-btn__h42 b-btn__blue">Сохранить</a>
+                        <label class="e-text-label js-uploader">
+                            <span class="b-qa-form-full-attach e-file-input">
+                                <input type="file" name="Upload[image][]" accept="image/*" class="js-upload-field" multiple="true">
+                                <span class="e-file-input-link">+ Фото</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="js-extra-container hidden b-answer-attachment b-answer-attachment__link">
+                        <a href="#" class="js-extra-remove fico-delete"></a>
+                        <span class="b-answer-attachment-title">Статья к ответу</span>
+                        <a class="js-extra-link" href="#">
+                            <img src="" alt="" class="js-extra-image" />
+                            <strong class="js-extra-title"></strong>
+                        </a>
+                    </div>
+
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="addThesis">
+        <class>popup__med modal-body</class>
+        <title>Вставка тезиса</title>
+        <edit_title>Редактирование тезиса</edit_title>
+        <button>
+            <class>btn btn-success</class>
+            <title>Вставить тезис</title>
+            <edit_title>Сохранить</edit_title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="help-block">Используйте тезисы для выделения самой важной информации, формулируя их коротко и ясно.</div>
+                    <div class="form-group">
+                        <label class="control-label" for="url_text5">Текст тезиса <span class="b-symbols-count">(<span class="length-count">0</span> <span class="length-count-word" data-wordforms="[&quot;символ&quot;,&quot;символа&quot;,&quot;символов&quot;]">символов</span> из 200)</span></label>
+                        <textarea class="text-message form-control" id="url_text5" name="url_text9"><%=asset.text%></textarea>
+                    </div>
+                    <hr/>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="addVideo">
+        <class>b-popup__editor</class>
+        <title>Вставка видео</title>
+        <edit_title>Редактирование видео</edit_title>
+        <button>
+            <class>btn btn-success</class>
+            <title>Вставить видео</title>
+            <edit_title>Сохранить</edit_title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="help-block">Вы можете вставить ссылку на видео с таких популярных сервисов как YouTube, RuTube или Vimeo.</div>
+                    <div class="form-group">
+                        <label class="control-label" for="url3">Адрес страницы (URL)</label>
+                        <input type="text" id="url3" name="url" value="" class="video-link form-control">
+                    </div>
+                    <div class="form-group">
+                        <div class="js-media-viewer">
+                            <div class="b-answer-form-attachments">
+                                <div class="l-row js-media-list"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="url_text3">Подпись к видео</label>
+                        <textarea class="text-message form-control" id="url_text3" name="url_text3"></textarea>
+                    </div>
+                    <hr/>
+                </form>
+            ]]>
+        </content>
+        <image>
+            <![CDATA[
+            <div class="l-col-3 js-image-attachment" data-hash="<%= item.hash %>">
+                <div class="b-answer-form-attachment">
+                    <img src="<%= item.url %>" alt="">
+                    <a href="#" class="js-remove-unit fico-delete"></a>
+                </div>
+            </div>
+            ]]>
+        </image>
+        <video>
+            <![CDATA[
+            <div class="l-col-3 js-image-attachment" data-hash="<%= item.hash %>">
+                <div class="b-answer-form-attachment">
+                    <img data-params='<%=JSON.stringify(item)%>' style="width:100%" src="<% if(item.data && item.data.thumbnail){ %><%= item.data.thumbnail %><% }else{ %>/prev/video_prev.jpg<% } %>" alt="" title="" />
+                    <a href="#" class="js-remove-unit fico-delete"></a>
+                </div>
+            </div>
+            ]]>
+        </video>
+    </asset>
+</assets>

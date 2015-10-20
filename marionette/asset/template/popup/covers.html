@@ -1,0 +1,112 @@
+<script type="text/template" id="basic-mini">
+    <div class="popup popup_form<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+    </div>
+</script>
+<script type="text/template" id="basic-mini-with-center-button">
+    <div class="popup popup_form<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+        <% if(asset.button){ %>
+        <div class="f_line center">
+            <button class="js-submit-button ui_btn ui_btn_27 ui_btn__yellow<% if(asset.button["class"]){ print(' '+asset.button["class"]); } %>"><%= asset.button.title %></button>
+        </div>
+        <% } %>
+        <% if(asset.notice){ %>
+        <div class="f_line f_bottom"><%= asset.notice %></div>
+        <% } %>
+    </div>
+</script>
+<script type="text/template" id="basic-mini-with-button">
+    <div class="popup popup_form<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+        <% if(asset.button){ %>
+        <div class="f_rzd__line f_line_big"></div>
+        <div class="f_line cf">
+            <button class="js-submit-button ui_btn ui_btn_27 ui_btn__yellow popup__btn<% if(asset.button["class"]){ print(' '+asset.button["class"]); } %>"><%= asset.button.title %></button>
+        </div>
+        <% } %>
+        <% if(asset.notice){ %>
+        <div class="f_line f_bottom"><%= asset.notice %></div>
+        <% } %>
+    </div>
+</script>
+<script type="text/template" id="basic-mini-with-button-and-cancel">
+    <div class="popup popup_form<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+        <% if(asset.button){ %>
+
+        <div class="f_line f_btns cf">
+            <button class="js-submit-button ui_btn ui_btn_27 ui_btn__yellow popup__btn<% if(asset.button["class"]){ print(' '+asset.button["class"]); } %>"><%= asset.button.title %></button>
+            <button class="js-cancel-button ui_btn ui_btn_27 popup__btn">Отмена</button>
+        </div>
+
+        <% } %>
+        <% if(asset.notice){ %>
+        <div class="f_line f_bottom"><%= asset.notice %></div>
+        <% } %>
+    </div>
+</script>
+<script type="text/template" id="basic-huge">
+    <div class="popup popup_form popup_huge<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <div class="popup_content">
+            <%= _.template(asset.content)({asset:asset}) %>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="basic-big">
+    <div class="popup popup_form popup_xwide<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <div class="popup_content">
+            <%= _.template(asset.content)({asset:asset}) %>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="basic-mid">
+    <div class="popup popup_form popup_wide<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+    </div>
+</script>
+<script type="text/template" id="basic-free">
+    <div class="popup popup_free<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+    </div>
+</script>
+<script type="text/template" id="basic-mid-with-button">
+    <div class="popup popup_form popup_wide<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+        <% if(asset.button){ %>
+        <div class="f_rzd__line f_line_big"></div>
+        <div class="f_line cf">
+            <button class="js-submit-button ui_btn ui_btn_27 ui_btn__yellow popup__btn<% if(asset.button["class"]){ print(' '+asset.button["class"]); } %>"><%= asset.button.title %></button>
+        </div>
+        <% } %>
+        <% if(asset.notice){ %>
+        <div class="f_line f_bottom"><%= asset.notice %></div>
+        <% } %>
+    </div>
+</script>
+<script type="text/template" id="basic-mid-with-button-and-back">
+    <div class="popup popup_form<% if(asset["class"]){ %> <%= asset["class"] %><% } %>">
+        <div class="popup-title popup_title"><%= asset.title %></div>
+        <%= _.template(asset.content)({asset:asset}) %>
+        <div class="f_line f_btns cf">
+            <div class="popup__aside cf">
+                <a href="#" class="back-button gray_link back_link">Назад</a>
+            </div>
+            <% if(asset.button){ %>
+            <button class="js-submit-button ui_btn ui_btn_27 ui_btn__yellow popup__btn<% if(asset.button["class"]){ print(' '+asset.button["class"]); } %>"><%= asset.button.title %></button>
+            <% } %>
+        </div>
+        <% if(asset.notice){ %>
+        <div class="f_line f_bottom"><%= asset.notice %></div>
+        <% } %>
+    </div>
+</script>

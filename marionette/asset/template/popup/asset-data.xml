@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+    <asset id="rareCar">
+        <class>popup__add_car</class>
+        <title>У вас раритет или что-то новое?</title>
+        <button>
+            <title>Завершить регистрацию</title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#" id="add_car__form">
+                    <div class="f_rzd f_desc">
+                        Добрый день! Скорее всего у вас что-то интересное для нас, если вы не смогли найти марку своего автомобиля в нашем списке. Расскажите нам о своем авто — мы с удовольствием  зарегистрируем вас и обновим информацию в нашем каталоге.
+                    </div>
+                    <div class="f_line">
+                        <label class="f_label" for="custom_car">Опишите марку и модель вашего автомобиля</label>
+                        <div class="f_text__inp">
+                            <input type="text" id="custom_car" name="custom_car" value="" class="f_text">
+                        </div>
+                    </div>
+                    <div class="f_line cf">
+                        <div class="f_line__half">
+                            <label class="f_label" for="custom_prod_year">Год выпуска</label>
+                            <div class="f_text__inp">
+                                <input type="text" pattern="[09]*" id="custom_prod_year" name="custom_prod_year" value="" class="f_text" />
+                            </div>
+                        </div>
+                        <div class="f_line__half">
+                            <label class="f_label" for="custom_buy_year">Год покупки</label>
+                            <div class="f_text__inp">
+                                <input type="text" pattern="[09]*" id="custom_buy_year" name="custom_buy_year" value="" class="f_text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_line">
+                        <label class="f_label" for="custom_desc">Описание автомобиля</label>
+                        <div class="f_text__inp">
+                            <textarea class="f_text f_area" id="custom_desc" name="custom_desc"></textarea>
+                        </div>
+                    </div>
+                 </form>
+                <div class="uploader-component f_line">
+                    <!--
+                        .f_line__out.loader   // добавляется автоматически
+                        .f_line__out.f_line__file_on  // нужно добавить после загрузки картинки
+                    -->
+                    <div class="upload-container f_line__out">
+                        <div class="f_line__file">
+                            <div class="f_file__btn">
+                                <form name="fileuploader" method="post" enctype="multipart/form-data">
+                                    <input type="file" accept="image/*" class="f_file" id="custom_car__image" />
+                                </form>
+                                <div class="ui_btn ui_btn_27"><i class="ico ico_album"></i> Прикрепить фото</div>
+                            </div>
+                            <div class="f_file__text">Максимальный размер файла — 10 МБ</div>
+                        </div>
+
+                        <div class="f_logo">
+                            <img class="f_logo__img" src="" alt="" title="">
+                            <div class="f_logo__btns">
+                                <span class="remove-picture-button f_logo__btn"><i class="ico ico_tooltip_close"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="socialExtraLogin">
+        <titles>
+            <vk>Вход через Вконтакте</vk>
+            <tw>Вход через Twitter</tw>
+            <ok>Вход через Одноклассники</ok>
+            <ma>Вход через Mail.Ru</ma>
+            <fb>Вход через facebook</fb>
+            <gp>Вход через Google Plus</gp>
+        </titles>
+        <names>
+            <title>
+                <vk>Вконтакте</vk>
+                <tw>Twitter</tw>
+                <ok>Одноклассники</ok>
+                <ma>Mail.Ru</ma>
+                <fb>facebook</fb>
+                <gp>Google Plus</gp>
+            </title>
+            <button>
+                <registered>Войти</registered>
+                <unregistered>Зарегистрироваться</unregistered>
+            </button>
+        </names>
+        <button>
+            <title>Зарегистрироваться</title>
+        </button>
+        <content>
+            <![CDATA[
+                <form name="enter_binding" action="#">
+                    <div class="f_line cf">
+                        <a href="#" class="f_ava">
+                            <img class="user-avatar f_ava__img" src="/img/blank.gif" alt="" title="">
+                            <span class="f_ava__link">
+                                <i class="icon-vk ico ico_vk2"></i>
+                                <i class="icon-tw ico ico_tw2 hidden"></i>
+                                <i class="icon-ok ico ico_ok2 hidden"></i>
+                                <i class="icon-gp ico ico_gp2 hidden"></i>
+                                <i class="icon-ma ico ico_ma2 hidden"></i>
+                                <i class="icon-fb ico ico_fb2 hidden"></i>
+                                <span class="user-name gray_link">&nbsp;</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="f_line f_line__registered cf">
+                        <input data-field="already_registered" type="checkbox" name="" id="already-registered" value="1" class="f_checkbox" checked="" />
+                        <label for="already-registered"><i class="ico ico_checkbox"></i> Я уже зарегистрирован на Blamper</label>
+                    </div>
+                    <div class="f_rzd__line"></div>
+                    <div class="f_line cf">
+                        <label class="f_label" for="social-extra-email">Введите электронную почту</label>
+                        <div class="f_text__inp">
+                            <input data-field="email" type="email" id="social-extra-email" name="email" value="" class="f_text">
+                            <label class="email-error error_label hidden" for="start_email">Введите почту</label>
+                        </div>
+                    </div>
+                    <div class="password-container f_line_rp open">
+                        <div class="f_line cf">
+                            <a class="gray_link pass__remind" href="#">Забыли пароль?</a>
+                            <label class="f_label" for="social-extra-password">Пароль</label>
+                            <div class="f_text__inp">
+                                <input data-field="password" type="password" value="" class="f_text" name="password" id="social-extra-password" />
+                                <span class="f_text__add f_text__showpass"><i class="ico ico_showpass"></i></span>
+                                <label class="error-1 error_label hidden" for="social-extra-password">Введите пароль</label>
+                                <label class="error-2 error_label hidden" for="social-extra-password">Не короче 4 символов</label>
+                            </div>
+                        </div>
+					</div>
+                </form>
+            ]]>
+        </content>
+        <notice>
+            <![CDATA[
+                Нажимая кнопку Связать аккаунты, вы принимаете <!--<a href="#" class="nowrap">-->Пользовательское соглашение<!--</a>-->
+            ]]>
+        </notice>
+    </asset>
+    <asset id="logoCropImage">
+        <class>crop_popup change_cover_popup2</class>
+        <title>Изменение обложки профиля</title>
+        <content>
+            <![CDATA[
+                <div action="#" class="change_cover_form">
+                    <div class="image_l">
+                        <div class="change_cover_img">
+                            <div id="st2_pic__drop" class="st2_pic">
+                                <div class="f_logo f_cover image_l_image preview-container">
+                                    <img id="st2_pic__image" class="cropped_image main-preview" src="/img/blank.gif" alt="" title="">
+                                </div>
+                                <div class="st2_pic_in">
+                                    <div class="st2_base">
+                                        <div class="st2_pic_title">Загрузите фото своего автомобиля —<br /> она будет отображаться в вашем профиле<br /> в качестве обложки</div>
+                                        <div class="st2_pic_text2 color_9">Минимальный размер фото 242X242</div>
+                                    </div>
+                                    <div class="st2_loader">
+                                        <div class="ico_loader"></div>
+                                        <div class="st2_pic_title color_9">Загрузка фото</div>
+                                    </div>
+                                    <div class="error-block tooltip st2_error_tooltip" id="error_tooltip">
+                                        <i class="ico ico_tooltip_close"></i>
+                                        <div class="tooltip__content error-0">Ошибка! Не прошла загрузка изображения.</div>
+                                        <div class="tooltip__content hide error-1">Ошибка! Неверный формат изображения.</div>
+                                        <div class="tooltip__content hide error-2">Упс! Минимальный размер фотографии для обложки 400X400 пикселей.</div>
+                                    </div>
+                                </div>
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                        <div class="f_line f_btns cf">
+                            <div class="f_file__btn cover_btn2">
+                                <form method="post" enctype="multipart/form-data" action="#" class="upload-file-form">
+                                    <input type="file" name="Upload[image][]" accept="image/*" class="f_file">
+                                </form>
+                                <a href="#" class="ui_btn ui_btn_27 ui_btn__ico"><i class="ico ico_dload_g"></i> Загрузить с компьютера</a>
+                            </div>
+                            <a href="#" class="choose-from-album ui_btn ui_btn_27 ui_btn__ico cover_btn2"><i class="ico ico_album"></i> Выбрать из альбома</a>
+                            <a class="remove-button ui_btn__void ui_btn_27 ui_btn_remove hide" href="#"><i class="ico ico_close"></i> Удалить</a>
+                        </div>
+                        <hr class="f_line cont_rzd" />
+                        <div class="f_line f_btns cf">
+                            <button class="submit-button ui_btn ui_btn_27 ui_btn__yellow ui_btn_med f_right">Сохранить обложку</button>
+                        </div>
+                    </div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="avatarCropImage">
+        <class>crop_popup</class>
+        <title>Аватар</title>
+        <title2>Аватар клуба</title2>
+        <voidtitle><![CDATA[ Добавьте логотип<br /> своего клуба]]></voidtitle>
+        <content>
+            <![CDATA[
+                <div class="change_cover_form">
+
+                    <div class="image_l">
+
+                        <div class="change_cover_img">
+                            <div id="st2_pic__drop" class="st2_pic">
+                                <div class="f_logo f_cover image_l_image preview-container">
+                                    <img id="st2_pic__image" class="cropped_image main-preview" src="/img/blank.gif" alt="" title="">
+                                </div>
+                                <div class="st2_pic_in">
+                                    <div class="st2_base">
+                                        <div class="st2_pic_title"><% if(asset.voidtitle){ %><%= asset.voidtitle %><%  }else{ %>Добавьте аватар клуба<%  } %></div>
+                                        <div class="st2_pic_text color_9">Максимальный размер файла — 8 МБ</div>
+                                    </div>
+                                    <div class="st2_hover">
+                                        <div class="st2_pic_ico"><i class="ico ico_menu_photo"></i></div>
+                                        <div class="st2_pic_title color_9 st2_title_hover">Отпустите, чтобы<br> загрузить фото</div>
+                                    </div>
+                                    <div class="st2_loader">
+                                        <div class="ico_loader"></div>
+                                        <div class="st2_pic_title color_9">Загрузка фото</div>
+                                    </div>
+                                    <div class="tooltip st2_error_tooltip" id="error_tooltip">
+                                        <i class="ico ico_tooltip_close"></i>
+                                        <div class="tooltip__content error-0">Ошибка! Не прошла загрузка изображения.</div>
+                                        <div class="tooltip__content hide error-1">Ошибка! Неверный формат изображения.</div>
+                                        <div class="tooltip__content hide error-2">Упс! Минимальный размер фотографии для обложки 115x115 пикселей.</div>
+                                    </div>
+                                </div>
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+
+                        <div class="f_line f_btns cf">
+                            <div class="f_file__btn cover_btn2">
+                                <form method="post" enctype="multipart/form-data" action="#" class="upload-file-form">
+                                    <input type="file" name="Upload[image][]" accept="image/*" class="f_file">
+                                </form>
+                                <a href="#" class="ui_btn ui_btn_27 ui_btn__ico"><i class="ico ico_dload_g"></i> Загрузить с компьютера</a>
+                            </div>
+                            <a href="#" class="choose-from-album ui_btn ui_btn_27 ui_btn__ico cover_btn2"><i class="ico ico_album"></i> Выбрать из альбома</a>
+                            <a class="remove-button ui_btn__void ui_btn_27 ui_btn_remove hide" href="#"><i class="ico ico_close"></i> Удалить</a>
+                        </div>
+                        <div class="f_line cover__small color_9">Максимальный размер файла — 8 МБ</div>
+                        <hr class="f_line cont_rzd">
+                        <div class="f_line center cf">
+                            <button class="submit-button ui_btn ui_btn_27 ui_btn__yellow ui_btn_med">Сохранить аватар</button>
+                        </div>
+
+					</div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="userAvatarCropImage">
+        <class>create_ava_form</class>
+        <title>Смена аватара</title>
+        <title2>Аватар клуба</title2>
+        <voidtitle><![CDATA[ Добавьте аватар своему профилю ]]></voidtitle>
+        <content>
+            <![CDATA[
+                <div class="change_cover_form">
+
+                    <div class="image_l">
+
+                        <div class="change_cover_img">
+                            <div id="st2_pic__drop" class="st2_pic">
+                                <div class="image_l_image cf">
+                                    <div class="f_logo f_cover ava_prev_big ava_image">
+                                        <div class="preview-container ava_image_container">
+                                            <img id="st2_pic__image" class="cropped_image main-preview" src="/img/blank.gif" alt="" title="" />
+                                        </div>
+                                    </div>
+                                    <div class="ava_prevs">
+                                        <div class="preview-area ava_prev ava_prev1"><img src="/img/blank.gif" alt="" title="" /></div>
+                                        <div class="preview-area ava_prev ava_prev2"><img src="/img/blank.gif" alt="" title="" /></div>
+                                        <div class="preview-area ava_prev ava_prev3"><img src="/img/blank.gif" alt="" title="" /></div>
+                                    </div>
+                                </div>
+                                <div class="st2_pic_in">
+                                    <div class="st2_base">
+                                        <div class="st2_pic_title"><% if(asset.voidtitle){ %><%= asset.voidtitle %><%  }else{ %>Добавьте аватар клуба<%  } %></div>
+                                        <div class="st2_pic_text color_9">Максимальный размер файла — 8 МБ</div>
+                                    </div>
+                                    <div class="st2_hover">
+                                        <div class="st2_pic_ico"><i class="ico ico_menu_photo"></i></div>
+                                        <div class="st2_pic_title color_9 st2_title_hover">Отпустите, чтобы<br> загрузить фото</div>
+                                    </div>
+                                    <div class="st2_loader">
+                                        <div class="ico_loader"></div>
+                                        <div class="st2_pic_title color_9">Загрузка фото</div>
+                                    </div>
+                                    <div class="tooltip st2_error_tooltip" id="error_tooltip">
+                                        <i class="ico ico_tooltip_close"></i>
+                                        <div class="tooltip__content error-0">Ошибка! Не прошла загрузка изображения.</div>
+                                        <div class="tooltip__content hide error-1">Ошибка! Неверный формат изображения.</div>
+                                        <div class="tooltip__content hide error-2">Упс! Минимальный размер фотографии для обложки 115x115 пикселей.</div>
+                                    </div>
+                                </div>
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+
+                        <div class="f_line f_btns cf">
+                            <div class="f_file__btn cover_btn2">
+                                <form method="post" enctype="multipart/form-data" action="#" class="upload-file-form">
+                                    <input type="file" name="Upload[image][]" accept="image/*" class="f_file">
+                                </form>
+                                <a href="#" class="ui_btn ui_btn_27 ui_btn__ico"><i class="ico ico_dload_g"></i> Загрузить с компьютера</a>
+                            </div>
+                            <a href="#" class="choose-from-album ui_btn ui_btn_27 ui_btn__ico cover_btn2"><i class="ico ico_album"></i> Выбрать из альбома</a>
+                            <a class="remove-button ui_btn__void ui_btn_27 ui_btn_remove hide" href="#"><i class="ico ico_close"></i> Удалить</a>
+                        </div>
+                        <div class="f_line cover__small color_9">Максимальный размер файла — 8 МБ</div>
+                        <hr class="f_line cont_rzd">
+                        <div class="f_line center cf">
+                            <button class="submit-button ui_btn ui_btn_27 ui_btn__yellow ui_btn_med">Сохранить аватар</button>
+                        </div>
+
+					</div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="avatarSelectImage">
+        <class>club_avatar_popup</class>
+        <title>Аватар клуба</title>
+        <image>
+            <default>/img/club_ava_void.png</default>
+        </image>
+        <content>
+            <![CDATA[
+                <form action="#" class="change_cover_form">
+                    <div class="f_line user_ava center">
+                        <img width="115" height="115" title="" alt="" src="img/club_ava_void.png" data-default="/img/club_ava_void.png" class="image-preview user_ava__img">
+                        <div class="info2__small">Не менее 115 x 115 пикселей<br> и размером не более 3 мб</div>
+                        <div class="load_btns">
+                            <div class="f_file__btn load_btn">
+                                <form method="post" enctype="multipart/form-data" action="#" class="upload-file-form">
+                                    <input type="file" name="Upload[image][]" accept="image/*" class="f_file">
+                                </form>
+                                <span class="ui_btn ui_btn_27 ui_btn__ico ui_btn__yellow w100"><i class="ico ico_dload"></i> Загрузить с компьютера</span>
+                            </div>
+                            <a class="choose-from-album ui_btn ui_btn_27 ui_btn__ico load_btn" href="#"><i class="ico ico_album"></i> Выбрать из альбома</a>
+                            <a class="remove-button ui_btn__void" href="#"><i class="ico ico_close"></i> Удалить текущий аватар</a>
+                        </div>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="addArticlePhoto">
+        <class>crop_popup modal-body</class>
+        <title>Вставка изображения</title>
+        <button>
+            <class>btn btn-success</class>
+            <title>Вставить изображение</title>
+        </button>
+        <image>
+            <default>/img/club_ava_void.png</default>
+        </image>
+        <content>
+            <![CDATA[
+                <div class="form-group js-image-block">
+                    <div class="b-image-holder js-preview-container">
+                        <img style="max-width: 100%;" id="st2_pic__image" class="cropped_image js-main-preview js-big-image" src="http://1x1px.me/ffffff-0" alt="" title="">
+                    </div>
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form method="post" enctype="multipart/form-data" action="#" class="js-upload-file-form upload-file-form">
+                                <input type="file" name="Upload[image][]" accept="image/*" class="js-file-field upload-file-form-btn">
+                            </form>
+                            <a href="#" class="btn btn-primary btn-upload-img">Загрузить с компьютера</a>
+                            <div><small>Максимальный размер файла — 8 МБ</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a class="js-remove-button btn btn-danger hide" href="#">Удалить</a>
+                </div>
+                <hr/>
+                <div class="js-description-block form-group">
+                    <label class="control-label" for="url_text7">Подпись к изображению <span class="b-symbols-count">(135 символов из 300)</span></label>
+                    <textarea data-field="description" class="form-control js-image-description" id="url_text7" name="description" rows="3"></textarea>
+                </div>
+                <div class="js-short-description-block form-group">
+                    <label class="control-label" for="url_text8>Название файла</label>
+                    <label class="f_label" for="url_text8">Название файла</label>
+                    <input data-field="filename" class="form-control js-short-description" id="url_text8" name="filename" />
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="createClub">
+        <class>popup__newclub</class>
+        <title>Создание клуба</title>
+        <button>
+            <title>Создать клуб</title>
+            <class>popup_btn</class>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#" class="f_big">
+                    <div class="f_line cf">
+                        <label class="f_label">Название клуба</label>
+                        <input id="create-club-name-field" data-field="name" type="text" class="f_text" value="" placeholder="Укажите название клуба" maxlength="200" />
+                        <label class="error-1 error_label hidden" for="create-club-name-field">Введите название</label>
+                        <label class="error-2 error_label hidden" for="create-club-name-field">Не короче 2 символов</label>
+                        <label class="error-3 error_label hidden" for="create-club-name-field">Не длинее 200 символов</label>
+                    </div>
+                    <div class="f_line cf">
+                        <label class="f_label">Участие в клубе</label>
+                        <div class="f_text__container">
+                            <div class="f_text f_text__input"></div>
+                            <i class="ico ico_arr__down5"></i>
+                            <select data-field="join" class="f_text f_text__select">
+                                <option value="-1">Свободное</option>
+                                <option value="-2">По заявкам</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="f_line cf">
+                        <label class="f_label">Тематика клуба</label>
+                        <div class="f_text__container">
+                            <div class="f_text f_text__input"></div>
+                            <i class="ico ico_arr__down5"></i>
+                            <select data-field="theme" class="f_text f_text__select">
+                                <option value="0">Общий</option>
+                                <option value="1">По марке автомобиля</option>
+                                <option value="2">По модели автомобиля</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="car-selector-block hide">
+                        <div class="f_line cf brand-selector">
+                            <label class="f_label">Марка автомобиля</label>
+                            <div class="f_text__container">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="mark" class="f_text f_text__select">
+                                    <option value="0">Выберите марку</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="f_line cf model-selector">
+                            <label class="f_label">Модель автомобиля</label>
+                            <div class="f_text__container">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="model" class="f_text f_text__select">
+                                    <option value="0">Выберите модель</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_line f_line_top">
+                        <label class="f_label" for="custom_desc4">Описание клуба</label>
+                        <div class="f_text__inp">
+                            <textarea data-field="about" class="f_text f_area" id="club_desc" name="club_desc"></textarea>
+                        </div>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="createCompany">
+        <class>popup__newclub</class>
+        <title>Регистрация компании</title>
+        <button>
+            <title>Зарегистрировать компанию</title>
+            <class>popup_btn</class>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#" class="f_big">
+                    <div class="f_line cf">
+                        <label class="f_label">Название компании</label>
+                        <input id="create-club-name-field" data-field="name" type="text" class="f_text" value="" placeholder="Укажите название компании" maxlength="200" />
+                        <label class="error-1 error_label hidden" for="create-club-name-field">Введите название</label>
+                        <label class="error-2 error_label hidden" for="create-club-name-field">Не короче 2 символов</label>
+                        <label class="error-3 error_label hidden" for="create-club-name-field">Не длинее 200 символов</label>
+                    </div>
+                    <div class="f_line cf">
+                        <label class="f_label">Тип компании</label>
+                        <div class="f_text__container">
+                            <div class="f_text f_text__input"></div>
+                            <i class="ico ico_arr__down5"></i>
+                            <select data-field="theme" class="f_text f_text__select">
+                                <option value="99" selected>Не выбран</option>
+                                <option value="100">Автосалон</option>
+                                <option value="101">Автосервис</option>
+                                <option value="102">Автозапчасти</option>
+                                <option value="103">АЗС</option>
+                                <option value="104">Шиномонтаж</option>
+                                <option value="105">Парковка</option>
+                                <option value="106">Автошкола</option>
+                                <option value="107">Автомойка</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="car-selector-block">
+                        <div class="f_line cf brand-selector">
+                            <label class="f_label">Марка автомобиля</label>
+                            <div class="f_text__container">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="mark" class="f_text f_text__select">
+                                    <option value="0">Выберите марку</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="f_line cf model-selector">
+                            <label class="f_label">Модель автомобиля</label>
+                            <div class="f_text__container">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="model" class="f_text f_text__select">
+                                    <option value="0">Выберите модель</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_line f_line_top">
+                        <label class="f_label" for="custom_desc4">Описание компании</label>
+                        <div class="f_text__inp">
+                            <textarea data-field="about" class="f_text f_area" id="club_desc" name="club_desc"></textarea>
+                        </div>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+
+    <asset id="userSelector">
+        <class>popup__people</class>
+        <title>Приглашение в клуб</title>
+        <button>
+            <title>Отправить приглашение</title>
+            <class>popup__btn</class>
+        </button>
+        <resultstemplate>
+            <![CDATA[
+                <% _.each(items, function(item){ %>
+                    <label class="search-unit people__item cf">
+                        <div class="people_img"><img src="<% if(item.profile && item.profile.avatar){ %><%= $.extractImagePathFromHash(item.profile.avatar, 53, 53) %><% }else{ %>/img/void_ava.png<% } %>" /></div>
+                        <div class="people_title">
+                            <a href="<%=item._url%>" class="nodeco">
+                                <% if(item.profile){ %><%= item.profile.firstname %> <%= item.profile.lastname %><% } %>
+                            </a>
+                        </div>
+                        <div class="people_data">
+                            <span class="people_data__item"><% if(item.nickname){ %><i class="ico ico_people_sm"></i> @<%=item.nickname%><% } %></span>
+                            <span class="people_data__item"><%
+                                if(item.profile && (item.profile.city_name || item.profile.country_name)){
+                                %><i class="ico ico_marker_sm"></i><%
+                                    if(item.profile.city_name){ %> <%= item.profile.city_name %>, <% } %><%
+                                    if(item.profile.country_name){ %> <%= item.profile.country_name %><% } %><%
+                                } %></span>
+                        </div>
+                        <% if (item.garage && item.garage.length) { %><div class="people_car"><%= item.garage[0].mark_name %> <b><%= item.garage[0].model_name %></b> </div><% } %>
+                        <% if(!item.status){ %>
+                        <input class="people_ch" type="checkbox"<% if(item.selected){ %>checked<% } %> value="item1" name="<%= item.id %>" id="friend_id_<%= item.id %>" />
+                        <span class="unit-checkbox ico people_ch__rep" for="people_id__2"></span>
+                        <% }else if(item.status == 1){ %>
+                        <span class="unit-sent people_ch__send">Отправлено</span>
+                        <% }else if(item.status == 2){ %>
+                        <span class="unit-participant people_ch__send">Участник</span>
+                        <% } %>
+                    </label>
+                <% }); %>
+            ]]>
+        </resultstemplate>
+        <content>
+            <![CDATA[
+                <form action="#" class="user-search-form">
+                    <div class="f_line_big">
+                        <div class="f_text__inp search_form search_people">
+                            <input class="search-field f_text search_txt" type="search" value="" name="t4" id="t5" placeholder="Поиск" />
+                            <button type="submit" class="search-button f_text__add search_btn"><i class="ico ico_search"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <form class="user-selector-form">
+                    <div class="results-container f_line">
+                        <div class="search_results jscroll">
+                            <div class="result-block" data-type="items">
+                                <h3 class="people__list__title">Друзья</h3>
+                                <div class="block-content people__list"></div>
+                            </div>
+                            <div class="result-block" data-type="friends">
+                                <h3 class="people__list__title">Друзья</h3>
+                                <div class="block-content people__list"></div>
+                            </div>
+                            <div class="result-block" data-type="users">
+                                <div class="people__rzd"></div>
+                                <h3 class="people__list__title">Остальные пользователи</h3>
+                                <ul class="block-content people__list"></ul>
+                            </div>
+                            <div class="result-block" data-type="selected">
+                                <div class="people__rzd"></div>
+                                <h3 class="people__list__title">Выбранные пользователи</h3>
+                                <ul class="block-content people__list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friend-none mess_emp__title mess_emp__title2 color_3 no_search_results center hide">У вас пока нет друзей.<br/>Воспользуйтесь <a class="small nodeco" href="/search/users">поиском</a>, чтобы найти новых друзей</div>
+                    <div class="result-none mess_emp__title color_3 no_search_results center hide">Ни один пользователь с таким именем не&nbsp;найден, попробуйте ввести что-нибудь другое!</div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="findFriends">
+        <class>popup__people</class>
+        <title>Поиск друзей</title>
+        <button>
+            <title>Отправить приглашение</title>
+            <class>popup__btn</class>
+        </button>
+        <resultstemplate>
+            <![CDATA[
+                <% _.each(items, function(item){ %>
+                    <label class="search-unit people__item cf">
+                        <div class="people_img"><img src="<% if(item.profile && item.profile.avatar){ %><%= $.extractImagePathFromHash(item.profile.avatar, 53, 53) %><% }else{ %>/img/void_ava.png<% } %>" /></div>
+                        <div class="people_title"><% if(item.profile){ %><%= item.profile.firstname %> <%= item.profile.lastname %><% } %></div>
+                        <div class="people_data">
+                            <% if(item.profile.nickname){ %><span class="people_data__item"><i class="ico ico_people_sm"></i> <%=item.profile.nickname%></span><% } %>
+                            <% if(item.profile && (item.profile.city || item.profile.country)){ %><span class="people_data__item"><i class="ico ico_marker_sm"></i><%= item.profile.city_name %>, <%= item.profile.country_name %></span><% } %>
+                        </div>
+                        <div class="people_car"><% if (item.garage && item.garage.length) { %> <%= item.garage[0].mark_name %> <b><%= item.garage[0].model_name %></b> <% } %></div>
+                        <% if(!item.status){ %>
+                        <input class="people_ch" type="checkbox"<% if(item.selected){ %>checked<% } %> value="item1" name="<%= item.id %>" id="friend_id_<%= item.id %>" />
+                        <span class="unit-checkbox ico people_ch__rep" for="people_id__2"></span>
+                        <% }else if(item.status == 1){ %>
+                        <span class="unit-sent hide people_ch__send">Отправлено</span>
+                        <% }else if(item.status == 2){ %>
+                        <span class="unit-participant hide people_ch__send">Участник</span>
+                        <% } %>
+                    </label>
+                <% }); %>
+            ]]>
+        </resultstemplate>
+        <content>
+            <![CDATA[
+                <form action="#" class="user-search-form">
+                    <div class="f_line_big">
+                        <div class="f_text__inp search_form search_people">
+                            <input class="search-field f_text search_txt" type="search" value="" name="t4" id="t5" placeholder="Поиск" />
+                            <button type="submit" class="search-button f_text__add search_btn"><i class="ico ico_search"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <form class="user-selector-form">
+                    <div class="results-container f_line">
+                        <div class="search_results jscroll">
+                            <div class="result-block" data-type="friends">
+                                <h3 class="people__list__title">Друзья</h3>
+                                <div class="block-content people__list"></div>
+                            </div>
+                            <div class="result-block" data-type="users">
+                                <div class="people__rzd"></div>
+                                <h3 class="people__list__title">Остальные пользователи</h3>
+                                <ul class="block-content people__list"></ul>
+                            </div>
+                            <div class="result-block" data-type="selected">
+                                <div class="people__rzd"></div>
+                                <h3 class="people__list__title">Выбранные пользователи</h3>
+                                <ul class="block-content people__list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-none mess_emp__title color_3 no_search_results center hide">Ни один пользователь с таким именем не&nbsp;найден, попробуйте ввести что-нибудь другое!</div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="photoFromAlbum">
+        <class>popup__albums</class>
+        <title>Сначала выберите альбом</title>
+        <title2>Выберите фото из альбома</title2>
+        <image_list_template>
+            <![CDATA[
+                <% _.each(items, function(item){ %>
+                    <a data-id="<%= item._id %>" data-hash="<%= item.fileId %>" href="#" class="gal_img"><img src="<% if(item.fileId){ %><%= $.extractImagePathFromHash(item.fileId, 189, 122) %><% } %>" alt="" title=""></a>
+                <% }); %>
+            ]]>
+        </image_list_template>
+        <album_list_template>
+            <![CDATA[
+                <% _.each(items, function(item){ %>
+                    <div class="album">
+                        <a data-id="<%= item._id %>" href="#" class="album_link">
+                            <img src="<% if(item.cover){ %><%= $.extractImagePathFromHash(item.cover, 257, 257) %><% } %>" alt="" title="" />
+                            <span class="album_t">
+                                <span class="album_t__name"><%= item.name %></span>
+                                <span class="album_t__data">
+                                    <span class="album_t__data_i"><%= item.photos.length %> фото</span>
+                                    <span class="album_t__data_i"><% switch(item.privacy){case 0: %>Закрытый<% break; case 1: %>Виден всем<% break; case 2: %>Только друзьям<% break; case 3: %>Только друзьям друзей<% break;} %></span>
+                                    <span class="album_t__data_i"><%= item.date %></span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                <% }); %>
+            ]]>
+        </album_list_template>
+        <album_description_template>
+            <![CDATA[
+                <h3 class="gal_header__name"><%= item.album_name %></h3>
+                <div class="gal_header__data color_7">
+                    <span class="gal_header__data_i"><span class="photo-count"><%= item.count %></span> фото</span>
+                    <span class="gal_header__data_i"><% switch(item.privacy){case 0: %>Закрытый<% break; case 1: %>Виден всем<% break; case 2: %>Только друзьям<% break; case 3: %>Только друзьям друзей<% break;} %></span>
+                    <a class="gal_header__data_i" href="#"><%= item.date %></a>
+                    <span class="gal_header__data_i"><%= item.description %></span>
+                </div>
+            ]]>
+        </album_description_template>
+        <content>
+            <![CDATA[
+                <form action="#" class="album-area">
+                    <div class="album_selector_line cf">
+
+                        <span class="ui_btn__group f_left album_selector center">
+                            <input name="album-type" value="0" checked="checked" type="radio" class="rg" id="album-type-1" />
+                            <label for="album-type-1" class="ui_btn ui_btn_27 ui_btn_first w50">Мои альбомы</label>
+                            <input name="album-type" value="1" type="radio" class="rg" id="album-type-2" />
+                            <label for="album-type-2" class="ui_btn ui_btn_27 ui_btn_last w50">Клубные альбомы</label>
+                        </span>
+                        <div class="hide club-selector-block f_text__container f_left album_selector">
+                            <div class="f_text f_text__input"></div>
+                            <i class="ico ico_arr__down5"></i>
+                            <select class="club-selector f_text f_text__select" name="album_rights">
+                                <option value="0">Все клубы</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="album-scroll f_line jscroll album_select_max_height">
+                        <div class="albums_out">
+                            <div class="album_select">
+                                <div class="album-list albums">
+                                </div>
+                            </div>
+                            <div class="hide no-albums" style='margin-top:10px;'>
+                                Нет альбомов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_rzd__line f_line_big"></div>
+                    <div class="f_line cf">
+                        <a href="#" class="popup-close ui_btn ui_btn_27 popup__btn popup_close">Отмена</a>
+                    </div>
+                </form>
+                <form action="#" class="hide photo-area">
+                    <div class="album-description f_line f_line__title">
+                    </div>
+                    <div class="f_line jscroll photo_select_max_height">
+                        <div class="photo_select_out">
+                            <div class="photo_select">
+                                <div class="photo-list gal photo_select_list">
+                                </div>
+                            </div>
+                            <div class="hide no-photo">
+                                Нет фото
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_rzd__line f_line_big"></div>
+                    <div class="f_line cf">
+                        <a href="#" class="back-to-albums ui_btn ui_btn_27 popup__btn popup_close">Назад к выбору альбома</a>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="discussionCar">
+        <class>popup__med</class>
+        <title>Выберите автомобиль</title>
+        <button>
+            <title>Прикрепить к обсуждению</title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="f_line cf">
+                        <label class="f_label" for="">Марка</label>
+                        <div class="f_text__inp">
+                            <div class="f_text__container f_text_nm">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="mark" class="f_text f_text__select" name="mark">
+                                    <option value="0">Выберите марку</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_line cf">
+                        <label class="f_label" for="">Модель</label>
+                        <div class="f_text__inp">
+                            <div class="f_text__container f_text_nm">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="model" class="f_text f_text__select" name="model">
+                                    <option value="0">Выберите модель</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_line cf">
+                        <div class="f_line__half2">
+                            <label class="f_label" for="album_id2">Год выпуска</label>
+                            <div class="f_text__inp">
+                                <div class="f_text__container f_text_nm">
+                                    <div class="f_text f_text__input"></div>
+                                    <i class="ico ico_arr__down5"></i>
+                                    <select data-field="year_production" class="f_text f_text__select" name="year">
+                                        <option value="0">Выберите год</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="f_line__half2">
+                            <label class="f_label" for="prob">Пробег (км)</label>
+                            <input data-field="millage" type="text" pattern="[09]*" class="f_text f_text_nm" value="000 000" name="millage" />
+                        </div>-->
+                    </div>
+                    <!--<div class="f_line cf">
+                        <label class="f_label" for="">Модификация</label>
+                        <div class="f_text__inp">
+                            <div class="f_text__container f_text_nm">
+                                <div class="f_text f_text__input"></div>
+                                <i class="ico ico_arr__down5"></i>
+                                <select data-field="modification" class="f_text f_text__select" name="modification">
+                                    <option value="">Lada</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>-->
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="discussionCategory">
+        <class>popup__med</class>
+        <title>Выбор категории обсуждения</title>
+        <button>
+            <title>Готово</title>
+        </button>
+        <selector_template>
+            <![CDATA[
+            <div class="f_text__inp f_cat_input">
+                <div class="f_text__container f_text_nm">
+                    <div class="f_text f_text__input"></div>
+                    <i class="ico ico_arr__down5"></i>
+                    <select class="f_text f_text__select" name="ctg">
+                        <option value="">Укажите категорию</option>
+                    </select>
+                </div>
+            </div>
+            ]]>
+        </selector_template>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="f_line cf">
+                        <label class="f_label">Категория обсуждения</label>
+                        <div class="selectors-area f_cat_inputs">
+                        </div>
+                    </div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="reportBug">
+        <class>popup__med</class>
+        <title>Есть что сказать?</title>
+        <button>
+            <title>Отправить</title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="f_line f_desc">Если вы заметили какую-либо неточность в данных, и вам есть что добавить  —  обязательно напишите. </div>
+                    <div class="f_line">
+                        <label class="f_label" for="url_text9">Текст сообщения</label>
+                        <div class="f_text__inp">
+                            <textarea class="text-message f_text f_area" id="url_text9" name="url_text9"></textarea>
+                        </div>
+                    </div>
+                    <div class="f_rzd__line f_line_big"></div>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="addThesis">
+        <class>popup__med modal-body</class>
+        <title>Вставка тезиса</title>
+        <edit_title>Редактирование тезиса</edit_title>
+        <button>
+            <class>btn btn-success</class>
+            <title>Вставить тезис</title>
+            <edit_title>Сохранить</edit_title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="help-block">Используйте тезисы для выделения самой важной информации, формулируя их коротко и ясно.</div>
+                    <div class="form-group">
+                        <label class="control-label" for="url_text5">Текст тезиса <span class="b-symbols-count">(<span class="length-count">0</span> <span class="length-count-word" data-wordforms="[&quot;символ&quot;,&quot;символа&quot;,&quot;символов&quot;]">символов</span> из 200)</span></label>
+                        <textarea class="text-message form-control" id="url_text5" name="url_text9"><%=asset.text%></textarea>
+                    </div>
+                    <hr/>
+                </form>
+            ]]>
+        </content>
+    </asset>
+    <asset id="showVideo">
+        <class>popup_video</class>
+        <title>Видео</title>
+        <content>
+            <![CDATA[
+                <div class="video-unit f_line cf">
+                    <%= $.generateEmbedVideo(asset.link, '800', '480') %>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="addEmailFriends">
+        <class>popup_friend_search2</class>
+        <title>Поиск друзей</title>
+        <button>
+            <title>Отправить приглашение</title>
+        </button>
+        <content>
+            <![CDATA[
+                <form action="#">
+                    <div class="f_line f_desc">Выберите знакомых, которых вы хотите пригласить:</div>
+                    <div class="f_line cf">
+                        <div class="jscroll email_friends_select_max_height">
+                            <div class="friends_add_list results-container">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            ]]>
+        </content>
+        <userlist>
+            <![CDATA[
+                <% for(var i in items){ %>
+                    <div class="friends_add_i">
+                        <input class="f_checkbox" type="checkbox" value="<%=items[i].email%>" id="emails<%=i%>" name="emails[<%=i%>]" checked="checked" />
+                        <label for="emails<%=i%>" class="friends_add_label">
+                            <i class="ico ico_checkbox"></i>
+                            <div class="widget_item friends_add_item">
+                                <img class="widget_img" src="/img/void_ava.png" alt="" title="">
+                                <div class="widget_title bold"><%=items[i].name%></div>
+                                <div class="widget_desc"><%=items[i].email%></div>
+                            </div>
+                        </label>
+                    </div>
+                <% } %>
+            ]]>
+        </userlist>
+    </asset>
+    <asset id="showCarSettings">
+        <class> </class>
+        <title>Расскажите о своем автомобиле</title>
+        <button>
+            <title>Перейти к настройкам авто</title>
+        </button>
+        <content>
+            <![CDATA[
+                <div class="f_line f_desc f_desc_padding">
+                    Укажите в настройках авто модификацию вашего автомобиля, чтобы участвовать в соревнованиях.
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="post">
+        <class>post_popup</class>
+        <title><![CDATA[
+                <% if(asset.url){ %>
+                    <a href="<%=asset.url%>" class="popup_title__link"><%=asset.title%></a>
+                <% }else{ %>
+                    <%=asset.title%>
+                <% } %>
+            ]]></title>
+        <title_post_club>В клубе</title_post_club>
+        <title_post_user></title_post_user>
+        <title_post_link><![CDATA[
+            <a href="<%= url %>" class="popup_title__link"><%= title %></a>
+        ]]></title_post_link>
+        <button>
+            <title></title>
+        </button>
+        <content>
+            <![CDATA[
+                <%= asset.content %>
+            ]]>
+        </content>
+    </asset>
+    <asset id="lastQuestion">
+        <class>popup__qa</class>
+        <title>Не нашли что искали?</title>
+        <content>
+            <![CDATA[
+                <div class="cf">
+                    <img src="<%=asset.car.image%>" class="popup__qa_image f_left" alt="" />
+                    <div class="popup__qa_wrapper f_right">
+                        <div class="f_line popup__qa_text">
+                            Вы искали информацию о <a href="<%= asset.car.link %>"><%= asset.car.markName %> <%= asset.car.modelName %> <%= asset.car.generationName %></a>. Не нашли то, что искали, — задайте вопрос!
+                        </div>
+                        <div class="f_line">
+                            <span class="b_btn_flat b_btn_flat__yellow b_btn_flat__35 no-button">
+                                <span class="bl_bt_ds_add_i"></span>
+                                <span>Задать вопрос об авто</span>
+                            </span>
+                            <span class="b_btn_flat b_btn_flat__gray b_btn_flat__35 yes-button">Продолжить чтение</span>
+                        </div>
+                        <hr class="ps_hr">
+                        <div class="f_line popup__qa_note">
+                            Мы искренне ценим вас. Нам важно ваше мнение,<br/> чтобы стать лучше.
+                        </div>
+                    </div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="lastHope">
+        <class> </class>
+        <title>Вы нашли что искали?</title>
+        <content>
+            <![CDATA[
+                <div class="f_line lhp_text">
+                    Вы были у нас на сайте<% if(asset.minutes){ %> <%=asset.minutes %> минут<% } %><% if(asset.seconds){ %> <%=asset.seconds%> сек<% } %>. Вы нашли то, что искали?
+                </div>
+                <div class="f_line">
+                    <span class="lhp_btn lhp_btn__yn yes-button">Да!</span>
+                    <span class="lhp_btn lhp_btn__yn no-button">Нет</span>
+                </div>
+                <div class="f_line lhp_note">
+                    Мы искренне ценим вас. Нам важно ваше мнение,<br/> чтобы стать лучше.
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="lastHopeSuggest">
+        <class> </class>
+        <title>Новые возможности для автомобилиста Блампере!</title>
+        <content>
+            <![CDATA[
+                <div class="f_line lhp_simple_text">
+                    Мы рады, что оказались полезны для вас.<br/>
+                    Попробуйте еще несколько наших сервисов.<br/><br/>
+                    В <a href="https://blamper.ru/auto/?utm_source=bl&utm_medium=link&utm_content=kbase&utm_campaign=popup">Базе знаний</a> вы найдете всю информацию о вашем автомобиле: статьи, обсуждения, клубы и других автовладельцев. Сможете скачать инструкцию по эксплуатации и посмотреть регламенты замен и проверок на ТО.<br/><br/>
+                    В сервисе &laquo;<a href="https://blamper.ru/qa/?utm_source=bl&utm_medium=link&utm_content=qa&utm_campaign=popup">Вопросы и ответы</a>&raquo; вы сможете задать любой вопрос нашим штатным экспертам по диагностике, ремонту и эксплуатации автомобилей и получить нужный ответ в течение всего 10 минут.
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="lastHopeRegistration">
+        <class> </class>
+        <title>Вам помогут эксперты Блампер</title>
+        <content>
+            <![CDATA[
+                <div class="f_line lhp_simple_text">
+                    Задайте вопрос нашим экспертам по диагностике и ремонту автомобилей в новом бесплатном сервисе Вопросов и ответов. И вы получите нужный ответ в течение всего 10 минут.<br/>
+                    Мы помогаем более чем 300 людям в день, поможем и&nbsp;Вам!
+                </div>
+                <div class="f_line">
+                    <a href="/qa/new" class="lhp_btn lhp_btn__w100 submit-button">Нажмите, чтобы задать вопрос</a>
+                </div>
+            ]]>
+        </content>
+    </asset>
+    <asset id="questionSolvedCongratulation">
+        <class>popup_qa</class>
+        <title>Нашли ответ? Расскажите друзьям!</title>
+        <content>
+            <![CDATA[
+                <div class="f_line cf qa_popup_text">
+                    Ваш вопрос был решен нашими экспертами за <% if(asset.answerTime){ %><%=asset.answerTime%> <%=$.wordByNumber(asset.answerTime,["минуту", "минуты", "минут"])%><% } %>.
+                    Расскажите друзьям в соцсетях, что на Блампере можно быстро найти ответ на любой вопрос об автомобиле.
+                </div>
+                <div class="f_line">
+                    <div class="qa_popup_card">
+                        <div class="qa_popup_card_inner">
+                            <img class="qa_popup_card_img" src="/favicon-96x96.png" />
+                            <div class="qa_popup_card_info">
+                                <div class="qa_popup_card_text"><b>Я нашел ответ на вопрос:</b>&nbsp;<span class="question-text"><%=asset.question%></span></div>
+                                <div class="wd_social_share r_hide">
+                                    <a href="#" data-network="tw" class="wd_social_share_btn wd_social_share_btn__tw">Tweet</a>
+                                    <a href="#" data-network="fb" class="wd_social_share_btn wd_social_share_btn__fb">Share</a>
+                                    <a href="#" data-network="vk" class="wd_social_share_btn wd_social_share_btn__vk">ВКонтакте</a>
+                                    <a href="#" data-network="ok" class="wd_social_share_btn wd_social_share_btn__ok">Класс!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ]]>
+        </content>
+    </asset>
+</assets>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+    <assettype id="type1">
+        <asset>
+            <content>
+                <![CDATA[
+                    <a href="#" class="wd_i">
+                        <span class="wd_i_in">
+                            <span class="wd_type"><i class="ico ico_wd_pers"></i> ПЕРСОНА</span>
+                            <span class="wd_foto">
+                                <i class="ico_wd ico_wd_face"></i>
+                                <img src="/prev/face1.jpg" alt="" title="">
+                            </span>
+                            <span class="wd_name">Джорджетто Джуджаро</span>
+                            <span class="wd_cont color_5">Дизайнер вашего BMW X6<br> и еще 456 автомобилей</span>
+                        </span>
+                    </a>
+                ]]>
+            </content>
+        </asset>
+        <asset>
+            <content>
+                <![CDATA[
+                    <a href="#" class="wd_i">
+                        <span class="wd_i_in">
+                            <span class="wd_type">
+                                <i class="ico ico_wd_pers"></i> ПЕРСОНА
+                            </span>
+                            <span class="wd_foto">
+                                <i class="ico_wd ico_wd_face"></i>
+                                <img src="/prev/face2.jpg" alt="" title=""> <!-- 100x100 -->
+                            </span>
+                            <span class="wd_name">Конструктор Волги</span>
+                            <span class="wd_cont color_5">Дизайнер вашей Волги</span>
+                        </span>
+                    </a>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type2">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_like"></i> ХОРОШАЯ СТАТЬЯ
+                            </div>
+                            <a href="//wiki.blamper.ru/vse-marki-i-modeli/istoriya-marki-ford-3519" class="wd_name nodeco">История Ford: от сои до конопли</a>
+                            <a href="//wiki.blamper.ru/vse-marki-i-modeli/istoriya-marki-ford-3519" class="wd_img">
+                                <img src="//wiki.blamper.ru/article/steady/52/27/33/covers/522733f019ecc2d80a6a91df/160x106.jpg" alt="" title="">
+                                <i class="ico_wd wd_img_border"></i>
+                            </a>
+                            <!--div class="wd_data">
+                                <span class="wd_data_i"><i class="ico ico_wd_like"></i> 345</span>
+                                <span class="wd_data_i"><i class="ico ico_wd_eye"></i> 345</span>
+                                <span class="wd_data_i"><i class="ico ico_wd_comm_b"></i> 345</span>
+                            </div-->
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type3">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type"><i class="ico ico_wd_comm"></i> ФАКТ</div>
+                            <div class="wd_cite">
+                                Какая автомобильная компания разрабатывает двигатели для космических кораблей? <a href="//wiki.blamper.ru/vse-marki-i-modeli/istoriya-marki-chrysler-3175" class="nodeco">История марки Chrysler</a>
+                                <i class="ico ico_wd_cite_b"></i>
+                                <i class="ico ico_wd_cite_a"></i>
+                            </div>
+                        </div>
+                    </div>
+                ]]>
+           </content>
+        </asset>
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type"><i class="ico ico_wd_comm"></i> ФАКТ</div>
+                            <div class="wd_cite">
+                                Известный писатель Курт Воннегут торговал автомобилями этой марки. <a href="//wiki.blamper.ru/vse-marki-i-modeli/saab-9-3-i-opisanie-modeli-3711" class="nodeco">История марки Saab</a>
+                                <i class="ico ico_wd_cite_b"></i>
+                                <i class="ico ico_wd_cite_a"></i>
+                            </div>
+                        </div>
+                    </div>
+                ]]>
+           </content>
+        </asset>
+    </assettype>
+    <assettype id="type4">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_star"></i> СТАТЬЯ НЕДЕЛИ
+                            </div>
+                            <a href="//wiki.blamper.ru/kuzov/reshetka-radiatora-3893" class="wd_name nodeco">Решетка радиатора</a>
+                            <a href="//wiki.blamper.ru/kuzov/reshetka-radiatora-3893" class="wd_img">
+                                <img src="//wiki.blamper.ru/article/steady/52/27/33/covers/5227334519ecc2d80a6a8b36/160x106.jpg" alt="" title="">
+                                <i class="ico_wd wd_img_border"></i>
+                            </a>
+                            <!--div class="wd_data color_b2">
+                                <span class="wd_data_i"><i class="ico ico_wd_like"></i> 345</span>
+                                <span class="wd_data_i"><i class="ico ico_wd_eye"></i> 345</span>
+                                <span class="wd_data_i"><i class="ico ico_wd_comm_b"></i> 345</span>
+                            </div-->
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_star"></i> СТАТЬЯ НЕДЕЛИ
+                            </div>
+                            <a href="//wiki.blamper.ru/vse-marki-i-modeli/istoriya-marki-kia-3886" class="wd_name nodeco">История марки KIA</a>
+                            <a href="//wiki.blamper.ru/vse-marki-i-modeli/istoriya-marki-kia-3886" class="wd_img">
+                                <img src="//wiki.blamper.ru/article/steady/52/27/33/original/5227334219ecc2d80a6a8b1d/160x106.jpg" alt="" title="">
+                                <i class="ico_wd wd_img_border"></i>
+                            </a>
+                            <!--div class="wd_data color_b2">
+                                <span class="wd_data_i"><i class="ico ico_wd_like"></i> 345</span>
+                                <span class="wd_data_i"><i class="ico ico_wd_eye"></i> 345</span>
+                                <span class="wd_data_i"><i class="ico ico_wd_comm_b"></i> 345</span>
+                            </div-->
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type5">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_info"></i> ЦИФРА
+                            </div>
+                            <div class="wd_count">
+                                <span>2</span><span>3</span><span>5</span><span>0</span>
+                            </div>
+                            <div class="wd_cont">Ровно из такого количества деталей <a href="#" class="nodeco">собран ваш автомобиль</a></div>
+                            <a href="#" class="wd_link"></a>
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type6">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_info"></i> ИСТОРИЯ МАРКИ
+                            </div>
+                            <a href="#" class="wd_model nodeco">
+                                <img src="/prev/chevrolet.png" alt="" title="">
+                                <span class="wd_model_name">Chevrolet</span>
+                            </a>
+                            <div class="wd_cont">История марки с 1956 года</div>
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type7">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_star"></i> НОВЫЙ КАТАЛОГ
+                            </div>
+                            <a href="//wiki.blamper.ru/tehnicheskie-zhidkosti/tormoznaya-zhidkost-2989" class="wd_name nodeco">Каталог тормозных жидкостей и трансмиссий</a>
+                            <a href="//wiki.blamper.ru/tehnicheskie-zhidkosti/tormoznaya-zhidkost-2989" class="wd_img">
+                                <img src="/prev/oil1.png" alt="" title="">
+                                <i class="ico_wd wd_img_border"></i>
+                            </a>
+                            <div class="wd_cont_s">56 000 наименований</div>
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type8">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_foto"></i> ФОТОПОСТ
+                            </div>
+                            <a href="#" class="wd_imgs nodeco">
+                                <img src="/prev/car1.jpg" alt="" title="">
+                                <i class="ico_wd wd_imgs_border"></i>
+                            </a>
+                            <a href="#" class="wd_name nodeco">Лучшие фотографии BMW X6 на одной странице</a>
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+    <assettype id="type9">
+        <asset>
+            <content>
+                <![CDATA[
+                    <div class="wd_i">
+                        <div class="wd_i_in">
+                            <div class="wd_type">
+                                <i class="ico ico_wd_star"></i> МАШИНА МЕЧТЫ
+                            </div>
+                            <a href="#" class="wd_dream">
+                                <img src="/prev/car2.png" alt="" title="" width="271" height="195">
+                                <span class="wd_dream_name">Range Rover Sport</span>
+                                <i class="ico_wd wd_dream_t"></i>
+                                <i class="ico_wd wd_dream_b"></i>
+                            </a>
+                        </div>
+                    </div>
+                ]]>
+            </content>
+        </asset>
+    </assettype>
+</assets>
